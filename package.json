@@ -1,0 +1,14 @@
+{
+  "name": "probabi-excel",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@biomejs/biome": "2.4.4"
+  },
+  "version": "1.0.0"
+}
