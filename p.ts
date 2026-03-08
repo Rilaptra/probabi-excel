@@ -1,5 +1,5 @@
-/** biome-ignore-all assist/source/useSortedKeys: <explanation> */
-/** biome-ignore-all lint/complexity/noStaticOnlyClass: <explanation> */
+/** biome-ignore-all assist/source/useSortedKeys: <explanatiaon> */
+/** biome-ignore-all lint/complexity/noStaticOnlyClass: <explanatiaon> */
 import { execSync } from "node:child_process";
 import { ExcelToolkit } from "./utils/excel";
 
@@ -13,19 +13,15 @@ const superFormula = ExcelToolkit.generateSuperFormula(
       mappingMode: "parallel", // <-- THIS IS THE MAGIC ⚡
       ranges: [
         {
-          start: { col: "M", row: 34 },
-          finish: { row: 37 },
-        },
-        {
-          start: { col: "N", row: 34 },
-          finish: { row: 37 },
+          start: { col: "J", row: 6 },
+          finish: { row: 17 },
         },
       ],
     },
   ],
   {
-    delimiter: '" + "', // Fix delimiter string formatting for Excel
-    formatCells: (cell1, cell2) => `FIXED(${cell1};4)&" ⋅ "&FIXED(${cell2};4)`,
+    delimiter: '"+"', // Fix delimiter string formatting for Excel
+    formatCells: (cell1) => cell1,
     wrapper: {
       start: "",
       end: "",
